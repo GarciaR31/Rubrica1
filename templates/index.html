@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+</head>
+<body>
+    <h1>Contenido persona</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.Nombre }}</td>
+                    <td>{{ row.Apellido }}</td>
+                    <td>{{ row.Edad }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Contenido Cursos</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Curso</th>
+                <th>ID Estudiante</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data2 %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.nombre_curso }}</td>
+                    <td>{{ row.ID_estudiante }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>        
+    </table>
+</body>
+</html>
